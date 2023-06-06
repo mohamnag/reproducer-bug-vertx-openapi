@@ -1,0 +1,17 @@
+openapi: 3.1.0
+info:
+  title: Demo
+  version: 1.0.0
+
+components:
+
+  schemas:
+    SomeSchema:
+      description: Default format with a self-reference
+      properties:
+        someOtherProperty:
+          type: String
+        childNodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/SomeSchema'

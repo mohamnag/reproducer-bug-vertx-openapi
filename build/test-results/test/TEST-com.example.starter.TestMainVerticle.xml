@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.starter.TestMainVerticle" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-06T10:06:14" hostname="MP14-M1-06127" time="0.107">
+  <properties/>
+  <testcase name="verticle_deployed(Vertx, VertxTestContext)" classname="com.example.starter.TestMainVerticle" time="0.107">
+    <failure message="io.vertx.core.file.FileSystemException: Unable to read file at path '/api.yaml'" type="io.vertx.core.file.FileSystemException">io.vertx.core.file.FileSystemException: Unable to read file at path '/api.yaml'
+	at app//io.vertx.core.file.impl.FileSystemImpl$16.perform(FileSystemImpl.java:1070)
+	at app//io.vertx.core.file.impl.FileSystemImpl$16.perform(FileSystemImpl.java:1063)
+	at app//io.vertx.core.file.impl.FileSystemImpl$BlockingAction.handle(FileSystemImpl.java:1174)
+	at app//io.vertx.core.file.impl.FileSystemImpl$BlockingAction.handle(FileSystemImpl.java:1156)
+	at app//io.vertx.core.impl.ContextBase.lambda$null$0(ContextBase.java:137)
+	at app//io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:264)
+	at app//io.vertx.core.impl.ContextBase.lambda$executeBlocking$1(ContextBase.java:135)
+	at app//io.vertx.core.impl.TaskQueue.run(TaskQueue.java:76)
+	at java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.file.NoSuchFileException: /api.yaml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
+	at io.vertx.core.file.impl.FileSystemImpl$16.perform(FileSystemImpl.java:1067)
+	... 11 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 06, 2023 12:06:14 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+]]></system-err>
+</testsuite>
